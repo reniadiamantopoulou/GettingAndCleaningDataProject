@@ -129,4 +129,4 @@ tidy_dataset    = aggregate(final_datasetNoActivityType[,names(final_datasetNoAc
 tidy_dataset    = merge(tidy_dataset,activity_labels,by='activity_id',all.x=TRUE)
 
 # Export the tidy_dataset 
-write.table(tidy_dataset, './tidyData.txt',sep='\t')
+write.table(tidy_dataset, './tidyData.txt',row.name = FALSE, sep='\t')
